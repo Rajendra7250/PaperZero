@@ -1377,7 +1377,7 @@ def chat_info():
     key = os.getenv("GEMINI_API_KEY")
     if not key:
         return jsonify({"model": None})
-    return jsonify({"model": "gemini-2.5-flash"})
+    return jsonify({"model": "gemini-1.5-flash"})
 
 
 @app.route("/api/chat", methods=["POST"])
@@ -1392,7 +1392,7 @@ def chat():
     prompt = data.get("prompt", "")
     
     sys_prompt = "You are Nexus AI, an intelligent academic system assistant for PaperZero. Keep answers brief, helpful, and friendly."
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}"
     payload = {
         "contents": [{"parts": [{"text": f"{sys_prompt}\n\nUser: {prompt}"}]}]
     }
