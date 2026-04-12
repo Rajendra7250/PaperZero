@@ -1,0 +1,10 @@
+Semester 4 - Data Structures Assignment
+
+Name: John Doe
+Roll No: 12345
+
+Q1. Explain Binary Trees.
+A binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.
+
+Q2. What is a graph?
+A graph is a non-linear data structure consisting of nodes and edges...

@@ -1,0 +1,40 @@
+DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING
+PAPERZERO COLLEGE OF TECHNOLOGY
+
+LAB JOURNAL - Operating Systems Lab (BCS451)
+Academic Year: 2024-25 | Semester: IV
+
+Student Name: ___________________________
+USN: ___________________________
+
+---
+
+Experiment No: 1
+Title: Implementation of FCFS CPU Scheduling Algorithm
+Date: ___________
+
+Aim:
+To implement and study the First Come First Serve (FCFS) CPU scheduling algorithm.
+
+Theory:
+FCFS is the simplest CPU scheduling algorithm. In this scheme, the process
+that requests the CPU first is allocated the CPU first.
+
+Algorithm:
+1. Input the number of processes.
+2. Input burst time for each process.
+3. Sort processes by arrival time.
+4. Calculate waiting time and turnaround time.
+
+Code:
+(Attach program here)
+
+Output / Screenshots:
+(Paste output here)
+
+Result:
+The FCFS scheduling algorithm was implemented successfully.
+
+Marks: _______ / 10
+Faculty Signature: _______________
+---

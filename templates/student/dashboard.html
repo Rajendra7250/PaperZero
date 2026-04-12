@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - PaperZero</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/student_style.css">
+</head>
+<body>
+
+  <aside class="student-sidebar">
+    <h2>PaperZero</h2>
+    <nav>
+      <a href="#" class="active">Dashboard / डैशबोर्ड</a>
+      <a href="#">Profile / प्रोफ़ाइल</a>
+      <a href="#">Assignments / नियत कार्य</a>
+      <a href="#">Results / परिणाम</a>
+      <a href="#">Notices / सूचनाएं</a>
+      <a href="#" id="studentLogout" style="margin-top: 20px; color: var(--danger); font-weight: bold;">Logout / लॉग आउट</a>
+    </nav>
+  </aside>
+
+  <script>
+    document.getElementById('studentLogout').addEventListener('click', async (e) => {
+      e.preventDefault();
+      try {
+        await fetch("/api/logout", { method: "POST", credentials: "same-origin" });
+      } catch (_) {}
+      localStorage.removeItem("ecoflow.session");
+      window.location.href = "/login";
+    });
+  </script>
+
+  <main class="student-main">
+    <div class="student-welcome">
+      <h1>नमस्ते {{ student_name }}, Welcome back!</h1>
+      <p>Here is your academic overview / यहाँ आपका शैक्षणिक अवलोकन है</p>
+    </div>
+
+    <div class="student-cards-grid">
+      <!-- Attendance Percentage -->
+      <div class="student-card">
+        <h3>Attendance Percentage <br><small>उपस्थिति प्रतिशत</small></h3>
+        <div class="value">{{ attendance_pct }}%</div>
+      </div>
+
+      <!-- Pending Assignments -->
+      <div class="student-card" style="border-left-color: var(--accent-color);">
+        <h3>Pending Assignments <br><small>लंबित असाइनमेंट</small></h3>
+        <div class="value">{{ pending_assignments }}</div>
+      </div>
+
+      <!-- Library Status -->
+      <div class="student-card" style="border-left-color: #1976d2;">
+        <h3>Library Status <br><small>पुस्तकालय की स्थिति</small></h3>
+        <div class="value">{{ library_status }}</div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+Operating Systems Lab Journal
+
+Name: Jane Smith
+Roll No: 67890
+
+Experiment 1: Process Management
+We learned about the fundamental concepts of process management in Linux, including fork(), wait(), and exec() system calls.
+
+Execution was successful. Code is attached below...

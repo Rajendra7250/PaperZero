@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECO_FLOW — Auth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/login.css" />
+  </head>
+  <body class="ecoflow-login-body">
+    <main class="ecoflow-login" data-mode="signin">
+      <div class="ecoflow-login__bg" aria-hidden="true">
+        <div class="ecoflow-login__orb ecoflow-login__orb--a"></div>
+        <div class="ecoflow-login__orb ecoflow-login__orb--b"></div>
+        <div class="ecoflow-login__orb ecoflow-login__orb--c"></div>
+        <div class="ecoflow-login__grain"></div>
+      </div>
+
+      <section class="ecoflow-login__card" aria-label="Authenticaton">
+        <header class="ecoflow-login__header">
+          <div class="ecoflow-login__brand" style="justify-content: center; flex-direction: column; text-align: center;">
+            <div class="ecoflow-login__logo" aria-hidden="true" style="margin: 0 auto 10px;">P</div>
+            <div>
+              <div class="ecoflow-login__title">PAPER ZERO</div>
+              <div class="ecoflow-login__subtitle">Digitized Paperless Ecosystem</div>
+            </div>
+          </div>
+
+          <div class="ecoflow-auth__tabs" role="tablist" aria-label="Mode selection">
+            <span class="ecoflow-auth__tabs-indicator" aria-hidden="true"></span>
+            <button
+              class="ecoflow-auth__tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-mode="signin"
+            >
+              Sign In
+            </button>
+            <button
+              class="ecoflow-auth__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-mode="signup"
+            >
+              Sign Up
+            </button>
+          </div>
+        </header>
+
+        <div class="ecoflow-login__forms-container">
+          <!-- SIGN IN FORM -->
+          <form class="ecoflow-login__form" id="loginForm" novalidate onsubmit="return false;">
+            <div class="ecoflow-login__field" data-field="login_identifier">
+              <label class="ecoflow-login__label" for="login_identifier">Username</label>
+              <input
+                class="ecoflow-login__input"
+                id="login_identifier"
+                name="username"
+                type="text"
+                autocomplete="username"
+                placeholder="Enter your username"
+              />
+              <div class="ecoflow-login__error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="ecoflow-login__field" data-field="login_password">
+              <label class="ecoflow-login__label" for="login_password">Password</label>
+              <input
+                class="ecoflow-login__input"
+                id="login_password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="••••••••"
+              />
+              <div class="ecoflow-login__error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="ecoflow-login__row">
+              <a class="ecoflow-login__link" href="#" id="forgotPassword">Forgot Password?</a>
+            </div>
+
+            <button class="ecoflow-login__submit" type="submit">Sign in</button>
+
+            <div class="ecoflow-login__helper" id="loginHelper" aria-live="polite"></div>
+          </form>
+
+          <!-- SIGN UP FORM -->
+          <form class="ecoflow-login__form" id="signupForm" style="display: none;" novalidate onsubmit="return false;">
+            <div class="ecoflow-login__row-fields">
+              <div class="ecoflow-login__field" data-field="signup_username">
+                <label class="ecoflow-login__label" for="signup_username">Username</label>
+                <input class="ecoflow-login__input" id="signup_username" name="username" type="text" placeholder="user123" />
+                <div class="ecoflow-login__error" role="alert" aria-live="polite"></div>
+              </div>
+              <div class="ecoflow-login__field" data-field="signup_email">
+                <label class="ecoflow-login__label" for="signup_email">Email</label>
+                <input class="ecoflow-login__input" id="signup_email" name="email" type="email" placeholder="user@college.edu" />
+                <div class="ecoflow-login__error" role="alert" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="ecoflow-login__row-fields">
+              <div class="ecoflow-login__field" data-field="signup_fullname">
+                <label class="ecoflow-login__label" for="signup_fullname">Full Name</label>
+                <input class="ecoflow-login__input" id="signup_fullname" name="full_name" type="text" placeholder="John Doe" />
+                <div class="ecoflow-login__error" role="alert" aria-live="polite"></div>
+              </div>
+              <div class="ecoflow-login__field" data-field="signup_password">
+                <label class="ecoflow-login__label" for="signup_password">Password (min 8)</label>
+                <input class="ecoflow-login__input" id="signup_password" name="password" type="password" placeholder="••••••••" />
+                <div class="ecoflow-login__error" role="alert" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="ecoflow-login__row-fields">
+              <div class="ecoflow-login__field" data-field="signup_role">
+                <label class="ecoflow-login__label" for="signup_role">Role</label>
+                <select class="ecoflow-login__input" id="signup_role" name="role">
+                  <option value="student">Student</option>
+                  <option value="hod">HOD</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+              <div class="ecoflow-login__field" data-field="signup_dept">
+                <label class="ecoflow-login__label" for="signup_dept">Department</label>
+                <select class="ecoflow-login__input" id="signup_dept" name="department">
+                  <option value="CSE">CSE</option>
+                  <option value="AIML">AIML</option>
+                  <option value="ECE">ECE</option>
+                  <option value="EEE">EEE</option>
+                  <option value="Mechanical">Mechanical</option>
+                  <option value="Civil">Civil</option>
+                  <option value="Admin">Admin</option>
+                  <option value="Library">Library</option>
+                  <option value="Finance">Finance</option>
+                  <option value="HR">HR</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="ecoflow-login__row-fields" id="student_extras">
+              <div class="ecoflow-login__field" data-field="signup_year">
+                <label class="ecoflow-login__label" for="signup_year">Year (1-4)</label>
+                <input class="ecoflow-login__input" id="signup_year" name="year" type="number" min="1" max="4" value="1" />
+              </div>
+              <div class="ecoflow-login__field" data-field="signup_usn">
+                <label class="ecoflow-login__label" for="signup_usn">USN/Roll No</label>
+                <input class="ecoflow-login__input" id="signup_usn" name="usn" type="text" placeholder="1CS.." />
+              </div>
+            </div>
+
+            <button class="ecoflow-login__submit" type="submit">Create Account</button>
+            <div class="ecoflow-login__helper" id="signupHelper" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+
+      <div style="position: absolute; bottom: 24px; left: 0; width: 100%; text-align: center; color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; line-height: 1.6; z-index: 10; font-weight: 500; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
+        Powered by KLS VDIT, Haliyal<br>
+        <span style="font-size: 0.85rem; opacity: 0.9;">Developed by Team INVOXIA</span>
+      </div>
+    </main>
+
+    <script src="/static/js/login.js"></script>
+  </body>
+</html>

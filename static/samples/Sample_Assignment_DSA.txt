@@ -1,0 +1,40 @@
+DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING
+PAPERZERO COLLEGE OF TECHNOLOGY
+
+ASSIGNMENT - 1
+Subject: Data Structures and Algorithms (BCS401)
+Academic Year: 2024-25 | Semester: IV
+
+Student Name: ___________________________
+USN: ___________________________
+Section: ___________________________
+Date of Submission: ___________________________
+
+---
+
+Q1. Define a Stack and explain its operations with an example.
+    (10 Marks)
+
+    Answer:
+    ................................................................
+    ................................................................
+    ................................................................
+
+Q2. Write an algorithm for Binary Search and analyze its time complexity.
+    (10 Marks)
+
+    Answer:
+    ................................................................
+    ................................................................
+    ................................................................
+
+Q3. Implement a Linked List in C and demonstrate insertion/deletion.
+    (10 Marks)
+
+    Answer:
+    ................................................................
+    ................................................................
+    ................................................................
+
+---
+Faculty Signature: _______________   HOD Signature: _______________
