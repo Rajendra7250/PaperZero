@@ -1,4 +1,4 @@
-# ECO_FLOW — PaperZero
+# PaperZero
 
 > A college paper-reduction ERP system that digitizes academic workflows, reducing dependency on physical paperwork across departments.
 
